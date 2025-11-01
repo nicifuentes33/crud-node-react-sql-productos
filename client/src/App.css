@@ -1,0 +1,271 @@
+/* ==== Estilos globales ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9fafb, #e8f6f3);
+  color: #333;
+}
+
+/* ==== Contenedor principal ==== */
+.App {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.App:hover {
+  transform: translateY(-3px);
+}
+
+/* ==== Encabezado ==== */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-principal {
+  font-size: 2.8rem;
+  color: #1b4332;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #2d6a4f;
+}
+
+/* ==== Secciones ==== */
+.formulario-section,
+.tabla-section {
+  margin-bottom: 50px;
+}
+
+.seccion-titulo {
+  font-size: 1.6rem;
+  color: #1b4332;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #40916c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ==== Formulario ==== */
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #081c15;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #95d5b2;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  border-color: #52b788;
+  box-shadow: 0px 0px 5px rgba(82, 183, 136, 0.5);
+  outline: none;
+}
+
+.btn-registrar {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: #52b788;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-registrar:hover {
+  background: #40916c;
+  transform: translateY(-2px);
+}
+
+/* ==== Buscador y contador ==== */
+.busqueda-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.input-busqueda {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  border: 1px solid #95d5b2;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+
+.input-busqueda:focus {
+  border-color: #52b788;
+  outline: none;
+}
+
+.contador {
+  font-size: 1.1rem;
+  color: #1b4332;
+  background: #d8f3dc;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #52b788;
+}
+
+/* ==== Tabla de registros ==== */
+.tabla-container {
+  overflow-x: auto;
+}
+
+.tabla-registros {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-registros th {
+  background: #40916c;
+  color: #fff;
+  text-align: left;
+  padding: 14px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.tabla-registros td {
+  padding: 14px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.tabla-registros tr:hover {
+  background: #d8f3dc;
+  transition: background 0.3s;
+}
+
+/* ==== Botones de acción ==== */
+.btn-editar,
+.btn-eliminar,
+.btn-agregar {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-editar {
+  background: #f4a261;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background: #e76f51;
+  transform: scale(1.05);
+}
+
+.btn-eliminar {
+  background: #e63946;
+  color: #fff;
+}
+
+.btn-eliminar:hover {
+  background: #c1121f;
+  transform: scale(1.05);
+}
+
+.btn-agregar {
+  background: #52b788;
+  color: #fff;
+}
+
+.btn-agregar:hover {
+  background: #40916c;
+  transform: scale(1.05);
+}
+
+/* ==== Carrito ==== */
+.carrito-section {
+  border-top: 2px solid #52b788;
+  padding-top: 20px;
+}
+
+.carrito-total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1b4332;
+}
+
+/* ==== Mensaje vacío ==== */
+.mensaje-vacio {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 30px;
+}
+
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .btn-registrar {
+    font-size: 1rem;
+  }
+
+  .tabla-registros th,
+  .tabla-registros td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .busqueda-section {
+    width: 100%;
+  }
+
+  .input-busqueda {
+    width: 90%;
+  }
+}
+
