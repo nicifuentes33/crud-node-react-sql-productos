@@ -65,6 +65,15 @@ CREATE TABLE orden_productos (
   FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
 
+## Datos de prueba
+
+INSERT INTO productos (nombre, precio, stock, categoria, descripcion) VALUES
+('Camiseta básica', 49.99, 25, 'Ropa', 'Camiseta 100% algodón, color blanco'),
+('Auriculares Bluetooth', 129.99, 10, 'Electrónica', 'Auriculares inalámbricos con cancelación de ruido'),
+('Mouse Gamer', 89.50, 15, 'Accesorios', 'Mouse RGB con 7 botones programables'),
+('Zapatos deportivos', 199.00, 8, 'Calzado', 'Zapatillas para running con amortiguación'),
+('Mochila escolar', 79.00, 12, 'Accesorios', 'Mochila con compartimento para laptop');
+
 Luego, ajusta tus credenciales en el archivo:
 server/db.js
 
